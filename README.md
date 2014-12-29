@@ -1,4 +1,4 @@
-Swift-SimpleValues
+Swift
 ==================
 
 Start learning Swift.
