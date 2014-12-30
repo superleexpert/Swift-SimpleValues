@@ -11,4 +11,4 @@ Start learning Swift.
 
 4.Protocols and Extensions: protocol
 
-5.Generics: []
+5.Generics: [ ]
