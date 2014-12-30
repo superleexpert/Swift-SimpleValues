@@ -1,7 +1,7 @@
 Swift
 ==================
 
-Start learning Swift.
+Start Swift.
 
 1.Simple Values: var, let
 
