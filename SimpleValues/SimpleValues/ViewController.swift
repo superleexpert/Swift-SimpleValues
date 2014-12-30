@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         simpleValues();
         functionsAndClosures();
         objectsAndClasses();
-        
+        protocolTest();
+        generics();
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,11 +96,35 @@ class Shape: NSObject {
     }
 }
 
+func protocolTest() {
+    var a = SimpleClass();
+    a.adjust();
+    let aDescription = a.simpleDescription;
+    println("protocol \(aDescription)");
+}
 
+protocol ExaProtocol {
+    var simpleDescription: String {get};
+    mutating func adjust();
+}
 
+class SimpleClass: ExaProtocol {
+    var simpleDescription: String = "simple class";
+    var anotherProperty: Int = 69105;
+    func adjust() {
+        simpleDescription += "adjusted.";
+    }
+}
 
+func generics() {
+    var a = repeat("repeat", 4);
+    println("rep \(a)");
+}
 
-
-
-
-
+func repeat<Item>(item: Item, times: Int) -> [Item] {
+    var result = [Item]()
+    for i in 0..<times {
+        result.append(item)
+    }
+    return result;
+}
