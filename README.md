@@ -1,7 +1,7 @@
 Swift
 ==================
 
-Start Swift.
+Introduction
 
 1.Simple Values: var, let
 
@@ -12,3 +12,6 @@ Start Swift.
 4.Protocols and Extensions: protocol
 
 5.Generics: [ ]
+
+一.The Basics
+
