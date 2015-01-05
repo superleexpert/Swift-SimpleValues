@@ -14,6 +14,7 @@
 		84A24C481A419D4000C14BC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A24C461A419D4000C14BC3 /* LaunchScreen.xib */; };
 		84A24C541A419D4000C14BC3 /* SimpleValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A24C531A419D4000C14BC3 /* SimpleValuesTests.swift */; };
 		84D6DFD21A5A304800F2DA40 /* BasicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6DFD11A5A304800F2DA40 /* BasicsViewController.swift */; };
+		84D6DFD41A5A9B5B00F2DA40 /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6DFD31A5A9B5B00F2DA40 /* OperatorsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		84A24C521A419D4000C14BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A24C531A419D4000C14BC3 /* SimpleValuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValuesTests.swift; sourceTree = "<group>"; };
 		84D6DFD11A5A304800F2DA40 /* BasicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
+		84D6DFD31A5A9B5B00F2DA40 /* OperatorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				84A24C3D1A419D4000C14BC3 /* AppDelegate.swift */,
 				84A24C3F1A419D4000C14BC3 /* ViewController.swift */,
 				84D6DFD11A5A304800F2DA40 /* BasicsViewController.swift */,
+				84D6DFD31A5A9B5B00F2DA40 /* OperatorsViewController.swift */,
 				84A24C411A419D4000C14BC3 /* Main.storyboard */,
 				84A24C441A419D4000C14BC3 /* Images.xcassets */,
 				84A24C461A419D4000C14BC3 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				84D6DFD21A5A304800F2DA40 /* BasicsViewController.swift in Sources */,
 				84A24C401A419D4000C14BC3 /* ViewController.swift in Sources */,
+				84D6DFD41A5A9B5B00F2DA40 /* OperatorsViewController.swift in Sources */,
 				84A24C3E1A419D4000C14BC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

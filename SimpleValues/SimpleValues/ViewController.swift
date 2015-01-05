@@ -21,8 +21,10 @@ class ViewController: UIViewController {
         protocolTest();
         generics();
         
-        println("--------------------------------------------------------------")
+        println("-------------------------------------------------------------- The Basics")
         theBasics()
+        println("-------------------------------------------------------------- Basic Operators")
+        basicOperator()
 
     }
 
@@ -165,6 +167,16 @@ func theBasics(){
     }
     
     /*Assertions cause your app to terminate and are not a substitute for designing your code in such a way that invalid conditions are unlikely to arise. Nonetheless, in situations where invalid conditions are possible, an assertion is an effective way to ensure that such conditions are highlighted and noticed during development, before your app is published.*/
-    let age = 5
+    let age = -5
     assert(age <= 0, "Less than 0")
 }
+
+func basicOperator(){
+    let fontStr = "i love"
+    let endStr = " Swift!"
+    let resultStr = fontStr + endStr;
+    println("\(resultStr)")
+}
+
+
+
