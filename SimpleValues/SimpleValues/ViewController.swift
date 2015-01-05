@@ -14,11 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Introduction.
         simpleValues();
         functionsAndClosures();
         objectsAndClasses();
         protocolTest();
         generics();
+        
+        println("--------------------------------------------------------------")
+        theBasics()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,4 +132,39 @@ func repeat<Item>(item: Item, times: Int) -> [Item] {
         result.append(item)
     }
     return result;
+}
+
+func theBasics(){
+    //The Basics.
+    let minValue = UInt8.min; let maxValue = UInt8.max
+    let min = UInt32.min; let max = UInt32.max
+    println("min8: \(minValue) max8: \(maxValue) min32: \(min) max32: \(max)")
+    
+    let httpError = (404, "Not Found")
+    let (statusCode, statusMessage) = httpError
+    println("The status code is \(statusCode)")
+    println("The status message is \(statusMessage)")
+    let (justCode, _) = httpError
+    println("The code is \(justCode)")
+    
+    let number = "123"
+    let convertNumber = number.toInt()//Maybe failed or success, so it is a optional value.
+    let num = "321"
+    let convert = String(num);
+    println("num: \(convertNumber) str: \(convert)")
+    
+    let possibleString: String? = "An optional string."
+    println(possibleString!) //Need the "!" to get value
+    let assumedString: String! = "An implicitly unwrapped optional string."
+    println(assumedString)  //No "!"
+    if (possibleString != nil) {
+        println(assumedString)
+    }
+    if let definiteString = assumedString {
+        println(definiteString)
+    }
+    
+    /*Assertions cause your app to terminate and are not a substitute for designing your code in such a way that invalid conditions are unlikely to arise. Nonetheless, in situations where invalid conditions are possible, an assertion is an effective way to ensure that such conditions are highlighted and noticed during development, before your app is published.*/
+    let age = 5
+    assert(age <= 0, "Less than 0")
 }
