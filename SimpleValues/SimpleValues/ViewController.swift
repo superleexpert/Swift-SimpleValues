@@ -27,7 +27,8 @@ class ViewController: UIViewController {
         basicOperator()
         println("-------------------------------------------------------------- Collection Types")
         collectionTypes()
-        println("-------------------------------------------------------------- Controle Flow")
+        println("-------------------------------------------------------------- Controle Flow and Func")
+        controlFlowAndFunc()
     }
 
     override func didReceiveMemoryWarning() {
@@ -205,13 +206,71 @@ func collectionTypes(){
     var emptyDic = Dictionary<Int, String>()
 }
 
-func controlFlow(){
+func controlFlowAndFunc(){
     for character in "Hello" {
         println(character)
     }
+    
+    testFunction("Lee")
+    
+    let total = count("some arbitrary string!")
+    println("\(total.vowels) vowels and \(total.consonants) consonants")
+    
+    var mathFunction: (Int, Int) -> Int = addTwoInts
+    println("Result: \(mathFunction(2, 3))")
+    
+    /*All of the functions you have encountered so far in this chapter have been examples of global functions, which are defined at a global scope. You can also define functions inside the bodies of other functions, known as nested functions.
+
+    Nested functions are hidden from the outside world by default, but can still be called and used by their enclosing function. An enclosing function can also return one of its nested functions to allow the nested function to be used in another scope.
+    */
+    //Nested Functions（嵌套函数）
+    var currentValue = -4
+    let moveNearerToZero = chooseStepFunction(currentValue < 0)
+    while currentValue != 0 {
+        println("\(currentValue)... ")
+        currentValue = moveNearerToZero(currentValue)
+    }
+    println("zero!")
 }
 
+func testFunction(inputName: String) -> String{
+    let resultName = inputName + " is nice!"
+    println("test func string: \(resultName)")
+    return resultName
+}
 
+func count(string: String) -> (vowels: Int, consonants: Int, others: Int) {
+    var vowels = 0, consonants = 0, others = 0
+    for character in string {
+        switch String(character).lowercaseString {
+        case "a", "e", "i", "o", "u":
+            ++vowels
+        case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+        "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+            ++consonants
+        default:
+            ++others
+        }
+    }
+    return (vowels, consonants, others)
+}
+
+func addTwoInts(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+func stepForward(input: Int) -> Int {
+    return input + 1
+}
+func stepBackward(input: Int) -> Int {
+    return input - 1
+}
+
+func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int { return input + 1 }
+    func stepBackward(input: Int) -> Int { return input - 1 }
+    return backwards ? stepBackward : stepForward
+}
 
 
 
