@@ -25,7 +25,9 @@ class ViewController: UIViewController {
         theBasics()
         println("-------------------------------------------------------------- Basic Operators")
         basicOperator()
-
+        println("-------------------------------------------------------------- Collection Types")
+        collectionTypes()
+        println("-------------------------------------------------------------- Controle Flow")
     }
 
     override func didReceiveMemoryWarning() {
@@ -177,6 +179,39 @@ func basicOperator(){
     let resultStr = fontStr + endStr;
     println("\(resultStr)")
 }
+
+func collectionTypes(){
+    let arr: [String] = ["sn1", "sn2", "sn3"]
+    for val in arr{
+        println("\(val)")
+    }
+    for (index, value) in enumerate(arr){
+        println("item: \(index) and value: \(value)")
+    }
+    
+    var threeDoubles1 = [Double](count: 3, repeatedValue: 1.1)
+    var threeDoubles2 = [Double](count: 3, repeatedValue:0.0)
+    println("\(threeDoubles2)")
+    
+    var plusArr = threeDoubles1 + threeDoubles2 //the two types must be same
+    println("\(plusArr)")
+    
+    var idc: [String:String] = ["1":"11", "2":"22", "3":"33", "4":"44"] //Dictionary type is unordered collection
+    for (key, value) in idc{
+        println("key: \(key), value:\(value)")
+    }
+    
+    //An empty dictionary.
+    var emptyDic = Dictionary<Int, String>()
+}
+
+func controlFlow(){
+    for character in "Hello" {
+        println(character)
+    }
+}
+
+
 
 
 
