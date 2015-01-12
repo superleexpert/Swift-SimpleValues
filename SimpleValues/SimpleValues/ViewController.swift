@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         collectionTypes()
         println("-------------------------------------------------------------- Controle Flow and Func")
         controlFlowAndFunc()
+        println("-------------------------------------------------------------- Closures And Enumerations And Classes")
+        closouresAndEnumerationsAndClasses()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -224,6 +227,7 @@ func controlFlowAndFunc(){
     Nested functions are hidden from the outside world by default, but can still be called and used by their enclosing function. An enclosing function can also return one of its nested functions to allow the nested function to be used in another scope.
     */
     //Nested Functions（嵌套函数）
+    /*
     var currentValue = -4
     let moveNearerToZero = chooseStepFunction(currentValue < 0)
     while currentValue != 0 {
@@ -231,6 +235,7 @@ func controlFlowAndFunc(){
         currentValue = moveNearerToZero(currentValue)
     }
     println("zero!")
+    */
 }
 
 func testFunction(inputName: String) -> String{
@@ -272,5 +277,22 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
     return backwards ? stepBackward : stepForward
 }
 
+func closouresAndEnumerationsAndClasses(){
+    let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+    var reversed = sorted(names, { (s1: String, s2: String) -> Bool in
+        return s1 > s2
+    })
+    var simpleReversed = sorted(names, >)
+    println("closoures: \(reversed), \(simpleReversed)")
 
+    let em1 = SomeFuck.two
+    println("enum: \(em1)")
+}
+
+enum SomeFuck{
+    case one
+    case two
+    case three
+    case four
+}
 
