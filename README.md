@@ -11,9 +11,10 @@ Introduction
 
 4.Protocols and Extensions: protocol
 
-5.Generics: [ ]
-
 
 [一.The Basics](http://blog.csdn.net/superleexpert/article/details/42419719) 
 
 [二.Basic Operators](http://blog.csdn.net/superleexpert/article/details/42423145) 
+
+[三.Subscripts and Type Casting](http://blog.csdn.net/superleexpert/article/details/42646443) 
+
