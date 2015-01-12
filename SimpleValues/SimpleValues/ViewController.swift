@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         controlFlowAndFunc()
         println("-------------------------------------------------------------- Closures And Enumerations And Classes")
         closouresAndEnumerationsAndClasses()
+        println("-------------------------------------------------------------- Type Casting")
+        typeCastin()
 
     }
 
@@ -294,5 +296,49 @@ enum SomeFuck{
     case two
     case three
     case four
+}
+
+func typeCastin(){
+    let library = [
+        Movie(name: "Casablanca", dir: "Michael Curtiz"),
+        Song(name: "Blue Suede Shoes", sg: "Elvis Presley"),
+        Movie(name: "Citizen Kane", dir: "Orson Welles"),
+        Song(name: "The One And Only", sg: "Chesney Hawkes"),
+        Song(name: "Never Gonna Give You Up", sg: "Rick Astley")
+    ]
+    
+    var movies = 0
+    var songs = 0
+    for item in library{
+        if item is Movie{
+            movies += 1
+        }else{
+            songs += 1
+        }
+    }
+    println("movies cout: \(movies), songs count: \(songs)")
+}
+
+class Media {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+class Movie: Media {
+    var dir: String
+    init(name: String, dir: String) {
+        self.dir = dir
+        super.init(name: name)
+    }
+}
+
+class Song: Media {
+    var sg: String
+    init(name: String, sg: String) {
+        self.sg = sg
+        super.init(name: name)
+    }
 }
 
